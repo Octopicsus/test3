@@ -540,7 +540,7 @@ body {
   transition: all 0.3s ease;
   display: block;
 }
-.header.sticky .img_white {
+.header.sticky .img_black {
   display: none;
 }
 .header.sticky .header__body .header__menu .header__list .header__link {
