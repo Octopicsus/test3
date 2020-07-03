@@ -1,0 +1,221 @@
+@media only screen and (max-width: 865px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .container {
+    padding: 5px 20px;
+  }
+
+  .header {
+    padding: 8px 0px;
+
+    .img__menu {
+      background-size: contain;
+      background-position: left;
+      width: 78px;
+      height: 20px;
+    }
+
+    .header__body {
+      .header__burger {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 20px;
+        z-index: 3;
+
+        &::before,
+        &::after {
+          content: "";
+          background-color: rgb(0, 0, 0);
+          position: absolute;
+          width: 50%;
+          height: 2.2px;
+          transition: all 0.3s ease;
+        }
+
+        &:before {
+          top: 0px;
+          margin-right: 50%;
+        }
+
+        &::after {
+          bottom: 0;
+          margin-left: 50%;
+        }
+
+        span {
+          position: absolute;
+          background-color: rgb(0, 0, 0);
+          left: 0;
+          width: 100%;
+          height: 2.1px;
+          top: 9px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .header__burger.active {
+        &::before,
+        &::after {
+          width: 100%;
+          background-color: rgb(255, 255, 255);
+        }
+
+        span {
+          transform: scale(0);
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          top: 9px;
+          height: 2.2px;
+          margin-right: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          height: 2.2px;
+          bottom: 9px;
+          margin-left: 0;
+        }
+      }
+
+      .header__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #030303;
+        border-left: 1px solid rgba(0, 0, 0, 0.055);
+        padding: 70px 0 0 0;
+        transition: all 0.3s ease;
+        overflow: auto;
+        z-index: 2;
+
+        .header__list {
+          display: block;
+          text-align: center;
+          margin-top: 12vh;
+
+          li {
+            margin-left: 0px;
+            margin-bottom: 35px;
+          }
+
+          .header__link {
+            font-size: 17px;
+            color: white;
+          }
+
+          .logo__menu {
+            display: inline-block;
+            background-image: url(../img/logo_adidas_favicon-04.svg);
+          }
+        }
+      }
+
+      .header__menu.active {
+        right: 0;
+      }
+    }
+  }
+
+  .header.sticky {
+    .img__menu {
+      background-image: url(../img/logo_adidas_w.svg);
+      width: 78px;
+      height: 20px;
+    
+    }
+
+    .header__body {
+      .header__menu {
+        background: linear-gradient(to right, #f2f2f2, #ffffff);
+        .header__list {
+          margin-top: 12vh;
+
+          .header__link {
+            color: black;
+          }
+          .logo__menu {
+            background-image: url(../img/logo_adidas_favicon-04.svg);
+          }
+        }
+      }
+
+      .header__burger {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 20px;
+        z-index: 3;
+
+        &::before,
+        &::after {
+          content: "";
+          background-color: rgb(255, 255, 255);
+          position: absolute;
+          width: 50%;
+          transition: all 0.3s ease;
+        }
+
+        &:before {
+          height: 2.2px;
+          top: 0px;
+          margin-right: 50%;
+        }
+
+        &::after {
+          height: 2.2px;
+          bottom: 0;
+          margin-left: 50%;
+        }
+
+        span {
+          position: absolute;
+          background-color: rgb(255, 255, 255);
+          width: 100%;
+          height: 2px;
+          top: 9px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .header__burger.active {
+        &::before,
+        &::after {
+          width: 100%;
+          background-color: rgb(0, 0, 0);
+        }
+
+        span {
+          transform: scale(0);
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          top: 9px;
+          margin-right: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 9px;
+          left: 0px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  section {
+    .shoes {
+      margin-top: 90px;
+      height: 320px;
+      width: 345px;
+    }
+  }
+}

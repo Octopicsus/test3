@@ -1,0 +1,171 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "base";
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+body {
+  color: #383838;
+  background-color: #030303;
+  min-height: 200vh;
+}
+
+.header {
+  padding: 40px 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: all 0.3s ease;
+
+  // .img__menu {
+  //   background-image: url(../img/logo_adidas_black-01.svg);
+  //   background-position: center;
+  //   background-size: auto;
+  //   background-repeat: no-repeat;
+  //   width: 87px;
+  //   height: 25px;
+  //   left: 0;
+  //   top: 0;
+  //   transition: all 0.3s ease;
+  // }
+
+  .img_black{
+    background-image: url(../img/logo_adidas_black-01.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 87px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    // display: none;
+  }
+
+  .header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+
+    .header__burger {
+      cursor: pointer;
+    }
+
+    .header__menu {
+      .header__list {
+        display: flex;
+        position: relative;
+        z-index: 3;
+
+        li {
+          margin-left: 50px;
+
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+        .header__link {
+          color: black;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        .logo__menu {
+          margin-top: 60px;
+          background-image: url(../img/logo_adidas_favicon-04.svg);
+          width: 78px;
+          height: 25px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.header.sticky {
+  padding: 0px 0px;
+  background: rgba(10, 10, 10, 0.918);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+
+  .img__menu {
+    background-image: url(../img/logo_adidas_w.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 87px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  .img_white{
+    background-image: url(../img/logo_adidas_w.svg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 87px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .img_white{
+    display: none;    
+  }
+
+  
+
+  .header__body {
+    .header__menu {
+      .header__list {
+        .header__link {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+section {
+  background: url(../img/minimalist.jpg) no-repeat;
+  background-size: cover;
+  height: 120vh;
+  top: 0;
+  left: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .shoes {
+    margin-top: 150px;
+    background-image: url(../img/sneakers.png);
+    filter: grayscale(100%);
+    background-size: cover;
+    height: 400px;
+    width: 445px;
+  }
+}
+
+@import "media";
